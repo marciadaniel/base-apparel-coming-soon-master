@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&family=Karla:wght@400;700&display=swap');
+
+$desaturated-red: hwb(0 59% 19%);
+$soft-red: hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+$grad1: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+ $grad2: linear-gradient(135deg, hsl(0, 80%, 86%),  hsl(0, 74%, 74%));
+ $font: 'Josefin Sans'; 
+
+ /* Medium Mobile - 375px */
+body {
+    font: {
+        size: 16px;
+        family: $font;
+    }
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    display: grid;
+    grid: {
+        template-columns: 100%;
+        template-areas: "header" "hero" "main";
+    }
+    background-image: $grad1;
+
+}
+/* content block style */
+.content__header {
+    grid-area: "header";
+}
+
+.content__hero {
+    grid-area: "hero";
+}
+
+.content__main {
+    grid-area: "main";
+    padding: 30px;
+    color: $desaturated-red;
+}
+
+/* header block style */
+.header__logo {
+    margin: 30px;
+}
+.header__logo img{
+   width: 30%;
+}
+
+/* hero block style */
+
+.hero__image {
+    width: 100%;
+}
+
+/* main block style */
+
+.main__title {
+    color: $dark-grayish-red;
+    font-weight: 600;
+    letter-spacing: 10px;
+    text: {
+        align: center;
+        transform: uppercase;
+    }
+}
+
+.highlighted-title {
+    color: $desaturated-red;
+    font-weight: 300;
+}
+.main__clarification {
+    text-align: center;
+    font-size: 90%;
+}
+.main__emailInput {
+    border: 1px solid $desaturated-red;
+    border-radius: 30px;
+    padding: 13px;
+    width: 80%;
+    background-image: $grad1;
+    position: relative;
+}
+.main__emailInput::placeholder {
+    font-family: $font;
+    color: $desaturated-red;
+    font-size: 90%;
+    padding-left: 8px;
+    
+}
+
+.main__emailInput:hover  {
+    border:  2px solid $soft-red;
+}
+
+.main__emailInput:focus  {
+    font-family: $font;
+    border:  2px solid $soft-red;
+}
+
+
+.main__validationBtn {
+    border: none;
+    border-radius: 30px;
+    padding: 11px;
+    width: 16%;
+    background-image: $grad2;
+    position: absolute;
+    right: 40px;
+    box-shadow: 0px 12px 10px 0 rgba($soft-red , 0.3);
+}
+
+.main__validationBtn:hover {
+    cursor: pointer;
+    background-image: linear-gradient(135deg,hsl(0, 100%, 93%),  hsl(0, 100%, 93%));;
+}
+
+ /* Larger Laptop - 1440px */
+
+ @media (width:1440px){
+
+   /* body{
+        font-size: 20px;
+    }*/
+
+    .content {
+       grid-template-columns: 60% 40%;
+      grid-template-rows: 20% 80%; 
+       grid-template-areas: 
+       "header hero" 
+       "main hero";
+       height: 760px;
+       background-image: url(images/bg-pattern-desktop.svg);
+    }
+
+    .header__logo {
+        margin: 50px 200px;
+    }
+
+    .content__main{
+        padding: 0 180px 300px 200px;
+    }
+
+    .main__title {
+        text-align: left;
+        font-size: 4em;
+    }
+
+    .main__clarification {
+        text-align: start;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 40px;
+    }
+
+
+    .main__emailInput {
+        padding: 18px;
+    }
+
+    .main__validationBtn {
+        padding: 16px;
+        width: 7%;
+        right: 760px;
+    }
+ }
+
