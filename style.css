@@ -85,13 +85,8 @@ body {
   padding-left: 8px;
 }
 
-.main__emailInput:hover {
-  border: 2px solid hsl(0, 93%, 68%);
-}
-
 .main__emailInput:focus {
   font-family: "Josefin Sans";
-  border: 2px solid hsl(0, 93%, 68%);
 }
 
 .main__validationBtn {
@@ -105,9 +100,14 @@ body {
   box-shadow: 0px 12px 10px 0 rgba(249, 98, 98, 0.3);
 }
 
+/*
 .main__validationBtn:hover {
-  cursor: pointer;
-  background-image: linear-gradient(135deg, hsl(0, 100%, 93%), hsl(0, 100%, 93%));
+    cursor: pointer;
+    background-image: linear-gradient(135deg,hsl(0, 100%, 93%),  hsl(0, 100%, 93%));;
+}
+*/
+.response-text {
+  visibility: hidden;
 }
 
 /* Larger Laptop - 1440px */
