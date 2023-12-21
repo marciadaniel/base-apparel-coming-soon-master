@@ -91,11 +91,13 @@ body {
     
 }
 
-
-.main__emailInput:focus {
-    font-family: $font;
-    
+.error-image {
+    visibility: hidden;
+    position: absolute;
+    right: 150px;
+    margin-top: 10px;
 }
+
 
 
 .main__validationBtn {
@@ -108,18 +110,18 @@ body {
     right: 40px;
     box-shadow: 0px 12px 10px 0 rgba($soft-red , 0.3);
 }
-/*
+
 .main__validationBtn:hover {
     cursor: pointer;
     background-image: linear-gradient(135deg,hsl(0, 100%, 93%),  hsl(0, 100%, 93%));;
 }
-*/
+
 .response-text {
     visibility:hidden;
 }
 
 
- /* Larger Laptop - 1440px */
+ /* Larger Laptop - 1024px */
 
  @media (width:1440px){
 
@@ -168,4 +170,54 @@ body {
         right: 760px;
     }
  }
+
+ /* Larger Laptop - 1440px */
+
+ @media (width:1440px){
+
+    /* body{
+         font-size: 20px;
+     }*/
+ 
+     .content {
+        grid-template-columns: 60% 40%;
+       grid-template-rows: 20% 80%; 
+        grid-template-areas: 
+        "header hero" 
+        "main hero";
+        height: 760px;
+        background-image: url(images/bg-pattern-desktop.svg);
+     }
+ 
+     .header__logo {
+         margin: 50px 200px;
+     }
+ 
+     .content__main{
+         padding: 0 180px 300px 200px;
+     }
+ 
+     .main__title {
+         text-align: left;
+         font-size: 4em;
+     }
+ 
+     .main__clarification {
+         text-align: start;
+         font-size: 18px;
+         line-height: 25px;
+         margin-bottom: 40px;
+     }
+ 
+ 
+     .main__emailInput {
+         padding: 18px;
+     }
+ 
+     .main__validationBtn {
+         padding: 16px;
+         width: 7%;
+         right: 760px;
+     }
+  }
 

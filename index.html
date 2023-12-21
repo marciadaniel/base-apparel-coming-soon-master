@@ -15,7 +15,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
-
+  <script src="code.js"></script>
   
 </head>
 <body>
@@ -43,22 +43,30 @@
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
       
-       <input class="main__emailInput" type="email"  name="fname">
-        <button class="main__validationBtn" type="button" >
+       <input id="email" class="main__emailInput" type="email"  name="email">
+       <img id="icon-error" class="error-image"  src="images/icon-error.svg"
+        >
+        <button id="submit" class="main__validationBtn" type="button" onclick="handleClick()" >
         <img  class="validationBtn-image"  src="images/icon-arrow.svg"
         >
         </button>
+
+        
       
-      <p class="response-text">Please provide a valid email</p>
+      <p id="response" class="response-text">Please provide a valid email</p>
    
     </main>
   </div>
   
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+      Coded by <a href="#">Your Name Here</a>
     </p>
   </footer>
+
+  
+  
+
 </body>
 </html>
